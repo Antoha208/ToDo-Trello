@@ -1,0 +1,81 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 2px solid gray;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons__cont {
+  margin: 15px 40px;
+  padding: 0;
+}
+
+.buttons__btn {
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  background: green;
+}
+
+.buttons__btn:hover {
+  color: #fff;
+  transition: all 0.3s ease;
+  background: transparent;
+  box-shadow: none;
+}
+
+.buttons__btn:before,
+.buttons__btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: lightgreen;
+  box-shadow:
+    -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 0.4s ease all;
+}
+
+.buttons__btn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.buttons__btn:hover:before,
+.buttons__btn:hover:after {
+  width: 100%;
+  transition: 0.8s ease all;
+}

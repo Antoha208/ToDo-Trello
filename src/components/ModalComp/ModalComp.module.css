@@ -1,0 +1,295 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.modal {
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: gray;
+    position: absolute;
+    top: 10%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    max-height: 630px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scrollbar-width: var(--scrollbarWidth);
+    scrollbar-color: var(--scrollbarThumb) var(--scrollbarBg);
+}
+
+.modal__cross {
+    font-size: 20px;
+    align-self: end;
+    transition: 0.5s;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.modal__cross:hover {
+    background-color: rgb(80, 76, 76);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.modal__title {
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    min-height: 53px;
+    margin-bottom: 10px;
+}
+
+.modal__titleTasks {
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    min-height: 23px;
+    margin-bottom: 10px;
+}
+
+.modal__input {
+    font-size: 1rem;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.modal__inputSelect {
+    margin: 0;
+}
+
+.modal__input:hover {
+    transition: 0.5s;
+    border-color: green;
+}
+
+.modal__select {
+    font-size: large;
+}
+
+.modal__select:hover {
+    transition: 0.5s;
+    border-color: green;
+}
+
+.modal__task {
+    min-width: 400px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: initial;
+}
+
+.modal__accept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    border: 1px solid lightgreen;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.modal__accept:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid green;
+    background-color: green;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.modal__text {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.modal__text:hover {
+    background-color: darkgreen;
+    border: 1px solid gray;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.modal__time {
+    font-size: 15px;
+}
+
+.modal__saveBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding: 10px 0;
+    border: 1px solid lightgreen;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.modal__saveBtn:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    background-color: green;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.modal__repBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 0;
+    border: 1px solid rgb(211, 156, 6);
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.modal__repBtn:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(215, 175, 29);
+    background-color: rgb(246, 139, 7);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.modal__btnGroup {
+    display: flex;
+    width: 20px;
+}
+
+.modal__inputAttach {
+    max-width: 250px;
+}
+
+.list {
+    width: 90%;
+    margin: 0;
+    margin-top: 2px;
+    counter-reset: li;
+    list-style: none;
+    background:#E8E8E8;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.list li {
+    position: relative;
+    margin: 0 0 10px 2em;
+    padding: 4px 8px;
+    border-top: 2px solid #787A77;
+    transition: .3s linear;
+}
+
+.list li:last-child {
+    margin-bottom: 0;
+}
+
+.list li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    top: -2px;
+    left: -2em;
+    width: 2em;
+    box-sizing: border-box;
+    margin-right: 8px;
+    padding: 4px;
+    border-top: 2px solid #787A77;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    background: #787A77;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: .3s linear;
+}
+
+.list li:hover {
+    border-top: 2px solid #389F70;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.list li:hover:before {
+    border: 2px solid #389F70;
+    background: #98EABA;
+    transition: 0.5s;
+}
+
+.list__addBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 0;
+    border: 1px solid lightgreen;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.list__addBtn:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid green;
+    background-color: green;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+:root {
+    --scrollbarBg: rgb(16, 16, 16);
+    --scrollbarThumb: rgba(92, 91, 91, 0.8);
+    --scrollbarWidth: 12px;
+    --scrollbarBorder: 3px solid var(--scrollbarBg);
+    --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 2);
+}
+
+.modal > div > div:last-child {
+    scroll-snap-align: end;
+}
+  
+.modal::-webkit-scrollbar {
+    width: var(--scrollbarWidth);
+}
+  
+.modal::-webkit-scrollbar-track {
+    background: var(--scrollbarBg);
+    border-radius: var(--scrollbarBorderRadius);
+    margin: 15px 0;
+}
+  
+.modal::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumb);
+    border-radius: var(--scrollbarBorderRadius);
+    border: var(--scrollbarBorder);
+}
+
